@@ -1,0 +1,29 @@
+package tut1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import utils.TextIO;
+
+public class Ex2_7 {
+	public static void main(String[] args) throws FileNotFoundException {
+
+	       String name;     
+	       int exam1, exam2, exam3; 
+	       double average;  
+
+	       File f = new File("data2_7.txt");
+	       Scanner sc = new Scanner(f);
+	       name = sc.nextLine();  
+	       exam1 = sc.nextInt();
+	       exam2 = sc.nextInt();
+	       exam3 = sc.nextInt();
+
+	       average = ( exam1 + exam2 + exam3 ) / 3.0;
+
+	       System.out.printf("The average grade for %s was %1.1f", name, average);
+	       System.out.println();
+
+	   }
+}

@@ -1,0 +1,9 @@
+package tut1;
+
+public class Ex3_1 {
+	int die1, die2;
+	int count = 0;
+	while(die1 != 1 || die2 != 1) {
+		
+	}
+}

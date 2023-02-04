@@ -1,0 +1,27 @@
+package tut1;
+
+import java.io.File;
+
+import utils.TextIO;
+
+public class Ex2_7 {
+	public static void main(String[] args) {
+
+	       String name;     
+	       int exam1, exam2, exam3; 
+	       double average;  
+
+	       File f = new File("data2_7.txt");
+
+	       name = TextIO.getln();  
+	       exam1 = TextIO.getlnInt();
+	       exam2 = TextIO.getlnInt();
+	       exam3 = TextIO.getlnInt();
+
+	       average = ( exam1 + exam2 + exam3 ) / 3.0;
+
+	       System.out.printf("The average grade for %s was %1.1f", name, average);
+	       System.out.println();
+
+	   }
+}

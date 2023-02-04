@@ -1,0 +1,17 @@
+package tut1;
+
+public class Ex2_3 {
+	 public static void main(String[] args) {
+		    
+	        String usersName;      // The user's name, as entered by the user.
+	        String upperCaseName;  // The user's name, converted to upper case letters.
+	        
+	        System.out.print("Please enter your name: ");
+	        usersName = TextIO.getln();
+	        
+	        upperCaseName = usersName.toUpperCase();
+	        
+	        System.out.println("Hello, " + upperCaseName + ", nice to meet you!");
+	    
+	    }
+}

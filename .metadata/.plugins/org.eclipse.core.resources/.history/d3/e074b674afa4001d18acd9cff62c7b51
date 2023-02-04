@@ -1,0 +1,30 @@
+package tut1;
+import utils.TextIO;
+public class Ex2_4 {
+	public static void main(String[] args) {
+		int quarters;  
+	    int dimes;      
+	    int nickels;    
+	    int pennies;   
+	    double dollars; 
+	    
+		System.out.print("Enter the number of quarters:  ");
+		quarters = TextIO.getlnInt();
+
+	    System.out.print("Enter the number of dimes:     ");
+	    dimes = TextIO.getlnInt();
+	    
+	    System.out.print("Enter the number of nickels:   ");
+	    nickels = TextIO.getlnInt();
+	    
+	    System.out.print("Enter the number of pennies:   ");
+	    pennies = TextIO.getlnInt();
+	    
+	    
+	    System.out.println();
+	    System.out.print("The total in dollars is $");
+	    System.out.printf("%1.2f", dollars);
+	    System.out.println();
+	}
+
+}
