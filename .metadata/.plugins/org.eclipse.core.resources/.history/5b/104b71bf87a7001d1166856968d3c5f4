@@ -1,0 +1,11 @@
+package tut1;
+
+public class Ex3_2 {
+	public int countDivisor(int n) {
+		
+		return 0;
+	}
+	public static void main(String[] args) {
+		
+	}
+}

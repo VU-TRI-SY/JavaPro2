@@ -1,0 +1,35 @@
+package tut1;
+import utils.TextIO;
+public class Ex3_4 {
+	public static void main(String[] args) {
+		   
+	       String line;    // A line of text, typed in by the user.
+	       int i;          // Position in line, from 0 to line.length() - 1.
+	       char ch;        // One of the characters in line.
+	       boolean didNL;  // Set to true if the previous output was a new line character.
+	       
+	       System.out.println("Enter a line of text.");
+	       System.out.print("? ");
+	       line = TextIO.getln(); //read line
+	       
+	       System.out.println(); // new line
+	       didNL = true;
+	       
+	       for ( i = 0;  i < line.length();  i++ ) {
+	          ch = line.charAt(i);
+	          if ( Character.isLetter(ch) ) {
+	             System.out.print(ch);
+	             didNL = false;
+	          }
+	          else {
+	             if ( didNL == false ) {
+	                System.out.println();
+	                didNL = true;
+	             }
+	          }
+	       }
+	       
+	       System.out.println();  // Make sure there's at least one carriage return at the end.
+	         
+	   }
+}

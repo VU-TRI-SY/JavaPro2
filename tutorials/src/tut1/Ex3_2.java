@@ -1,37 +1,29 @@
 package tut1;
 
-public class Ex3_2 {
-	public static void main(String[] args) {
-		   
-	       int N;            
-	       int maxDivisors;  
-	       int numWithMax;   
-	       
-	       maxDivisors = 1;  // Start with the fact that 1 has 1 divisor.
-	       numWithMax = 1;
+import java.util.Scanner;
 
-	       for ( N = 2;  N <= 10000;  N++ ) {
-	       
-	           int D;  // A number to be tested to see if it's a divisor of N.
-	           int divisorCount;  // Number of divisors of N.
-	           
-	           divisorCount = 0;
-	           
-	           for ( D = 1;  D <= N;  D++ ) {  // Count the divisors of N.
-	              if ( N % D == 0 )
-	                 divisorCount++;
-	           }
-	           
-	           if (divisorCount > maxDivisors) {
-	              maxDivisors = divisorCount;
-	              numWithMax = N;
-	           }
-	       
-	       }
-	       
-	       System.out.println("Among integers between 1 and 10000,");
-	       System.out.println("The maximum number of divisors is " + maxDivisors);
-	       System.out.println("A number with " + maxDivisors + " divisors is " + numWithMax);
-	   
-	   }
+public class Ex3_2 {
+	public static int countDivisor(int n) {
+		int count = 0;
+		for(int i = 1; i <= n; i++) {
+			if(n % i == 0) {
+				count++;
+			}
+		}
+		return count;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int res = 1; //gia su so 1 la so co nhieu uoc nhat
+		int numDiv = 1; //numDiv la so uoc cua res
+		for(int n = 2; n <= 10000; n++) {
+			int ct = countDivisor(n);
+			if(numDiv < ct) {
+				res = n;
+				numDiv = ct;
+			}
+		}
+		System.out.println(res + " has largest number of divisors in [1, 10000]");
+		sc.close();
+	}
 }

@@ -10,9 +10,9 @@ public class Ex3_4 {
 	       
 	       System.out.println("Enter a line of text.");
 	       System.out.print("? ");
-	       line = TextIO.getln();
+	       line = TextIO.getln(); //read line
 	       
-	       System.out.println();
+	       System.out.println(); // new line
 	       didNL = true;
 	       
 	       for ( i = 0;  i < line.length();  i++ ) {
@@ -23,7 +23,7 @@ public class Ex3_4 {
 	          }
 	          else {
 	             if ( didNL == false ) {
-	                System.out.println();
+	                System.out.println(); //new line
 	                didNL = true;
 	             }
 	          }

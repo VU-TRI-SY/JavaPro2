@@ -1,0 +1,9 @@
+package tut1;
+
+public class Ex7_2 {
+	public static void main(String[] args) {
+		int R, C;
+		int[][] M, T;
+		System.out.println("E")
+	}
+}
